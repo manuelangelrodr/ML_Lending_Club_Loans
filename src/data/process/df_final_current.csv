@@ -43,7 +43,7 @@ id,loan_status,loan_amount,loan_term,interest_rate,installment,purpose,dti,revol
 1051953,current,10000,60,12.42,194.26,small_business,10.18,66.2,2,rent,42336.0
 1059906,current,35000,60,12.42,489.57,debt_consolidation,26.33,59.3,10,rent,90000.0
 1056057,current,35000,60,11.71,470.14,debt_consolidation,19.42,44.9,8,rent,70000.0
-1060848,current,6500,60,14.27,152.16,debt_consolidation,19.06,80.6,6,mortgage,46212.0
+1060848,current,6500,60,14.27,152.16,debt_consolidation,19.06,80.6,4,mortgage,46212.0
 1053622,current,14100,60,17.58,354.84,small_business,4.83,70.5,4,rent,43000.0
 1060865,current,35000,60,19.03,572.36,small_business,4.29,75.4,10,mortgage,140000.0
 1060853,current,25000,60,19.03,397.8,debt_consolidation,15.56,48.8,7,rent,95000.0
@@ -63,7 +63,7 @@ id,loan_status,loan_amount,loan_term,interest_rate,installment,purpose,dti,revol
 1042427,current,8000,60,11.71,111.6,wedding,3.25,51.1,3,mortgage,88000.0
 1048482,current,30000,60,20.3,494.57,debt_consolidation,18.77,71.4,8,rent,75000.0
 1059120,current,17475,60,7.9,353.5,home_improvement,8.44,52.7,8,mortgage,90000.0
-1059128,current,7000,60,8.9,144.97,debt_consolidation,15.17,62.9,9,mortgage,25000.0
+1059128,current,7000,60,8.9,144.97,debt_consolidation,15.17,62.9,3,mortgage,25000.0
 1058952,current,35000,60,19.91,925.54,home_improvement,9.41,70.7,4,mortgage,69000.0
 1058974,current,22000,60,19.42,575.79,debt_consolidation,16.2,97.0,4,rent,82500.0
 1058698,current,12000,60,19.42,314.07,debt_consolidation,23.15,78.4,4,rent,68000.0
@@ -110,7 +110,7 @@ id,loan_status,loan_amount,loan_term,interest_rate,installment,purpose,dti,revol
 1051869,current,27300,60,12.42,613.09,debt_consolidation,20.19,41.4,10,mortgage,56000.0
 1052008,current,10400,60,16.77,257.19,home_improvement,9.86,54.2,5,mortgage,56004.0
 1048949,current,35000,60,11.71,773.44,debt_consolidation,16.63,62.9,7,mortgage,78000.0
-1048624,current,16000,60,17.58,402.65,credit_card,12.83,43.5,7,own,49000.0
+1048624,current,16000,60,17.58,402.65,credit_card,12.83,43.5,10,own,49000.0
 1045401,current,22000,60,12.69,497.09,debt_consolidation,15.81,27.3,10,rent,45000.0
 1050056,current,6075,60,17.27,151.87,small_business,5.97,24.4,1,rent,46440.0
 1038880,current,20000,60,16.77,494.59,debt_consolidation,20.73,59.3,8,mortgage,56500.0
@@ -182,7 +182,7 @@ id,loan_status,loan_amount,loan_term,interest_rate,installment,purpose,dti,revol
 1038738,current,12900,60,18.25,329.34,debt_consolidation,21.79,73.1,1,rent,75000.0
 1038713,current,22000,60,17.27,549.96,debt_consolidation,13.8,58.3,10,rent,84000.0
 1038518,current,25000,60,11.71,552.46,house,13.38,8.3,10,mortgage,60000.0
-1033819,current,7000,60,12.42,157.21,debt_consolidation,19.79,52.4,10,mortgage,56400.0
+1033819,current,7000,60,12.42,157.21,debt_consolidation,19.79,52.4,1,mortgage,56400.0
 1038434,current,24000,60,17.58,603.98,debt_consolidation,5.14,68.6,3,rent,125004.0
 1038022,current,15000,60,17.27,374.97,debt_consolidation,22.16,74.1,1,rent,62000.0
 1038330,current,23600,60,18.64,607.54,debt_consolidation,24.36,50.9,10,own,60000.0
@@ -195,7 +195,7 @@ id,loan_status,loan_amount,loan_term,interest_rate,installment,purpose,dti,revol
 1036766,current,12000,60,13.49,276.06,debt_consolidation,21.42,51.8,3,own,52000.0
 1025417,current,21000,60,21.28,571.44,other,10.89,86.2,10,mortgage,109992.0
 1036314,current,26375,60,17.58,663.75,debt_consolidation,22.66,82.2,10,mortgage,158000.0
-1000862,current,3125,60,21.67,85.73,other,13.01,97.0,1,own,9960.0
+1000862,current,3125,60,21.67,85.73,other,13.01,97.0,10,own,9960.0
 909492,current,15000,60,15.96,364.46,debt_consolidation,14.35,59.2,8,mortgage,90000.0
 1035719,current,18800,60,13.49,432.49,debt_consolidation,23.63,66.8,10,mortgage,58000.0
 1035681,current,35000,60,22.06,967.86,debt_consolidation,16.36,85.0,10,rent,90000.0
@@ -222,7 +222,7 @@ id,loan_status,loan_amount,loan_term,interest_rate,installment,purpose,dti,revol
 1032091,current,15000,60,20.89,404.88,debt_consolidation,11.33,92.9,10,rent,59000.0
 1032002,current,12000,60,11.71,265.18,debt_consolidation,11.81,50.3,10,mortgage,120000.0
 1029762,current,30000,60,14.65,708.2,debt_consolidation,17.16,7.9,1,mortgage,70000.0
-1031659,current,5200,60,8.9,107.7,vacation,8.17,2.2,1,rent,36000.0
+1031659,current,5200,60,8.9,107.7,vacation,8.17,2.2,4,rent,36000.0
 1031564,current,14000,60,14.65,330.5,credit_card,22.33,77.7,8,rent,81000.0
 1031352,current,15850,60,21.28,431.3,debt_consolidation,22.8,92.1,10,mortgage,66000.0
 1029623,current,35000,60,12.42,786.01,debt_consolidation,18.75,78.8,1,mortgage,101000.0
@@ -272,7 +272,7 @@ id,loan_status,loan_amount,loan_term,interest_rate,installment,purpose,dti,revol
 1022176,current,15000,60,14.27,351.13,debt_consolidation,13.72,66.7,6,mortgage,95000.0
 1020047,current,14400,60,15.27,344.62,debt_consolidation,23.14,62.2,8,mortgage,50000.0
 1022002,current,35000,60,21.28,952.39,debt_consolidation,8.12,89.4,10,mortgage,120000.0
-1021434,current,20000,60,19.42,523.45,other,14.46,73.1,5,mortgage,116000.0
+1021434,current,20000,60,19.42,523.45,other,14.46,73.1,2,mortgage,116000.0
 1021172,current,14400,60,17.27,359.98,debt_consolidation,11.75,28.3,4,rent,34008.0
 1020936,current,35000,60,22.74,981.45,house,24.0,71.4,10,mortgage,120000.0
 1005707,current,2000,60,18.64,51.49,debt_consolidation,7.89,62.7,1,rent,42000.0
@@ -288,11 +288,11 @@ id,loan_status,loan_amount,loan_term,interest_rate,installment,purpose,dti,revol
 1018910,current,6450,60,18.64,166.05,debt_consolidation,23.17,96.3,5,own,23000.0
 1015527,current,12000,60,9.91,254.44,car,1.29,12.5,2,rent,40000.0
 1017797,current,25000,60,12.69,564.87,small_business,20.88,32.2,4,rent,41658.0
-1018587,current,3500,60,8.9,72.49,car,21.76,80.0,9,rent,55200.0
+1018587,current,3500,60,8.9,72.49,car,21.76,80.0,3,rent,55200.0
 890375,current,35000,60,22.06,967.86,debt_consolidation,21.55,99.6,5,rent,67000.0
 1008428,current,20000,60,14.27,468.17,debt_consolidation,17.35,92.1,2,own,57000.0
 1018453,current,35000,60,12.42,786.01,debt_consolidation,6.78,60.4,1,mortgage,270000.0
-1018133,current,9400,60,10.65,202.75,home_improvement,18.93,1.5,2,own,22887.0
+1018133,current,9400,60,10.65,202.75,home_improvement,18.93,1.5,10,own,22887.0
 1016476,current,24800,60,14.27,580.53,small_business,3.89,4.8,7,rent,95000.0
 1017659,current,17100,60,14.27,400.29,credit_card,15.03,64.2,3,mortgage,94000.0
 986466,current,10575,60,11.71,233.69,debt_consolidation,22.81,52.9,3,mortgage,50000.0
@@ -344,7 +344,7 @@ id,loan_status,loan_amount,loan_term,interest_rate,installment,purpose,dti,revol
 1000794,current,9400,60,14.27,220.04,debt_consolidation,24.15,45.6,1,mortgage,62000.0
 1006607,current,12600,60,12.69,284.7,other,18.04,80.2,10,rent,64590.0
 1006097,current,24000,60,22.06,663.68,small_business,9.05,21.1,2,rent,91200.0
-1005669,current,20000,60,14.65,472.14,home_improvement,19.73,19.3,3,mortgage,57600.0
+1005669,current,20000,60,14.65,472.14,home_improvement,19.73,19.3,4,mortgage,57600.0
 1000124,current,2800,60,9.91,59.37,debt_consolidation,1.08,7.0,5,rent,33204.0
 1002729,current,12175,60,10.65,262.6,debt_consolidation,15.5,40.3,10,mortgage,106000.0
 1003613,current,15000,60,16.77,370.94,debt_consolidation,5.66,35.7,1,rent,88000.0
@@ -411,7 +411,7 @@ id,loan_status,loan_amount,loan_term,interest_rate,installment,purpose,dti,revol
 989968,current,35000,60,11.71,773.44,debt_consolidation,19.87,34.2,10,mortgage,75000.0
 987401,current,11100,60,8.9,229.88,debt_consolidation,21.23,40.6,10,mortgage,85356.0
 915455,current,12000,60,17.27,299.98,car,16.83,87.3,2,mortgage,90000.0
-976184,current,16000,60,17.58,402.65,small_business,8.34,71.4,5,mortgage,45336.0
+976184,current,16000,60,17.58,402.65,small_business,8.34,71.4,6,mortgage,45336.0
 980473,current,29175,60,18.25,744.83,moving,16.7,46.9,2,mortgage,58000.0
 987923,current,18000,60,11.71,397.77,debt_consolidation,12.54,41.4,10,mortgage,80000.0
 988489,current,5000,60,20.89,134.96,other,17.95,98.8,7,mortgage,74000.0
@@ -421,7 +421,7 @@ id,loan_status,loan_amount,loan_term,interest_rate,installment,purpose,dti,revol
 988132,current,12000,60,12.69,271.14,home_improvement,5.22,44.6,8,mortgage,100000.0
 987707,current,28000,60,14.65,660.99,debt_consolidation,12.03,60.4,10,mortgage,150000.0
 875856,current,12600,60,14.27,294.95,debt_consolidation,15.71,25.9,10,mortgage,65000.0
-988193,current,24375,60,17.58,613.41,debt_consolidation,15.82,89.5,2,mortgage,48000.0
+988193,current,24375,60,17.58,613.41,debt_consolidation,15.82,89.5,10,mortgage,48000.0
 966769,current,25875,60,23.13,731.37,credit_card,21.64,95.4,10,mortgage,90000.0
 987843,current,25000,60,11.71,552.46,debt_consolidation,14.98,27.3,10,mortgage,93000.0
 986180,current,32875,60,15.96,798.76,small_business,22.5,72.1,5,mortgage,60000.0
@@ -482,15 +482,15 @@ id,loan_status,loan_amount,loan_term,interest_rate,installment,purpose,dti,revol
 978420,current,12000,60,12.42,269.49,credit_card,14.41,37.9,10,mortgage,90000.0
 978406,current,35000,60,14.27,819.3,debt_consolidation,11.23,41.0,10,mortgage,117500.0
 976290,current,20000,60,18.64,514.86,debt_consolidation,22.35,96.0,5,rent,45000.0
-977338,current,29175,60,10.65,629.26,debt_consolidation,26.14,6.5,10,own,55000.0
+977338,current,29175,60,10.65,629.26,debt_consolidation,26.14,6.5,8,own,55000.0
 977281,current,12800,60,12.69,289.22,debt_consolidation,8.97,60.0,2,mortgage,55000.0
-977092,current,30000,60,9.91,636.09,debt_consolidation,9.19,20.5,3,mortgage,65000.0
+977092,current,30000,60,9.91,636.09,debt_consolidation,9.19,20.5,1,mortgage,65000.0
 977063,current,4625,60,9.91,98.07,debt_consolidation,28.51,30.7,3,mortgage,50000.0
 977182,current,21000,60,17.27,524.96,debt_consolidation,19.51,70.3,10,mortgage,55000.0
 976489,current,20000,60,19.91,528.88,debt_consolidation,20.04,69.6,1,rent,60000.0
 973519,current,20000,60,12.69,451.9,other,15.73,38.5,5,mortgage,42116.0
 975094,current,30000,60,11.71,662.95,credit_card,8.04,27.8,10,mortgage,63000.0
-976390,current,18500,60,11.71,408.82,home_improvement,12.0,1.8,6,own,36000.0
+976390,current,18500,60,11.71,408.82,home_improvement,12.0,1.8,10,own,36000.0
 976194,current,12000,60,19.42,314.07,debt_consolidation,10.57,33.7,6,rent,103000.0
 975777,current,12000,60,14.27,280.91,debt_consolidation,20.63,73.7,6,mortgage,72000.0
 975805,current,25000,60,19.03,648.93,debt_consolidation,15.05,67.1,1,rent,50000.0
@@ -532,9 +532,9 @@ id,loan_status,loan_amount,loan_term,interest_rate,installment,purpose,dti,revol
 968808,current,24250,60,17.58,610.27,credit_card,16.45,53.6,10,mortgage,80000.0
 968717,current,35000,60,12.42,786.01,debt_consolidation,21.36,62.8,10,mortgage,60960.48
 968704,current,25000,60,18.64,643.58,debt_consolidation,21.12,18.4,1,rent,60000.0
-968671,current,10800,60,17.27,269.98,home_improvement,15.53,47.4,9,mortgage,47689.56
+968671,current,10800,60,17.27,269.98,home_improvement,15.53,47.4,10,mortgage,47689.56
 968224,current,10000,60,8.9,207.1,other,19.39,45.3,1,mortgage,76728.0
-967609,current,27000,60,10.65,582.35,debt_consolidation,24.06,54.7,10,rent,86400.0
+967609,current,27000,60,10.65,582.35,debt_consolidation,24.06,54.7,9,rent,86400.0
 967154,current,20000,60,16.77,494.59,debt_consolidation,21.12,60.0,5,mortgage,80000.0
 967160,current,27200,60,19.03,706.04,debt_consolidation,13.36,72.6,10,mortgage,165000.0
 967065,current,20125,60,10.65,434.07,other,12.65,0.0,7,mortgage,70000.0
@@ -546,7 +546,7 @@ id,loan_status,loan_amount,loan_term,interest_rate,installment,purpose,dti,revol
 965640,current,12000,60,14.65,283.28,debt_consolidation,10.13,32.7,1,mortgage,81996.0
 965621,current,2600,60,19.91,68.76,debt_consolidation,16.69,73.0,9,rent,74400.0
 873817,current,20000,60,12.69,451.9,home_improvement,15.18,82.5,10,mortgage,175000.0
-965589,current,19100,60,22.06,528.18,other,3.93,36.1,9,mortgage,150000.0
+965589,current,19100,60,22.06,528.18,other,3.93,36.1,10,mortgage,150000.0
 965258,current,35000,60,20.3,933.14,debt_consolidation,19.05,68.3,8,mortgage,74000.0
 965249,current,15000,60,15.96,364.46,debt_consolidation,12.62,67.9,2,rent,56000.0
 949841,current,1500,60,15.96,36.45,debt_consolidation,13.75,55.8,1,own,24960.0
@@ -617,7 +617,7 @@ id,loan_status,loan_amount,loan_term,interest_rate,installment,purpose,dti,revol
 879330,current,22800,60,12.69,515.16,debt_consolidation,16.41,63.3,5,mortgage,92000.0
 853014,current,13200,60,14.27,309.0,debt_consolidation,8.66,58.4,1,mortgage,50004.0
 879059,current,8125,60,19.03,210.91,debt_consolidation,19.73,96.7,6,mortgage,70000.0
-878126,current,24000,60,12.99,545.96,home_improvement,15.54,18.5,3,mortgage,100000.0
+878126,current,24000,60,12.99,545.96,home_improvement,15.54,18.5,4,mortgage,100000.0
 878393,current,15000,60,12.99,341.22,debt_consolidation,23.95,41.9,10,rent,52000.0
 878184,current,25450,60,21.36,506.97,debt_consolidation,16.89,92.3,10,mortgage,81000.0
 872504,current,13000,60,7.49,260.44,other,9.09,34.7,1,mortgage,80004.0
@@ -661,7 +661,7 @@ id,loan_status,loan_amount,loan_term,interest_rate,installment,purpose,dti,revol
 868157,current,20000,60,11.49,439.76,debt_consolidation,18.73,30.5,10,own,80000.0
 868293,current,5000,60,8.49,102.56,other,17.74,16.9,4,mortgage,105000.0
 868171,current,16000,60,12.99,274.12,credit_card,16.63,84.7,1,rent,48000.0
-867996,current,22350,60,10.59,351.62,debt_consolidation,15.36,49.6,3,mortgage,55000.0
+867996,current,22350,60,10.59,351.62,debt_consolidation,15.36,49.6,4,mortgage,55000.0
 866203,current,15000,60,17.99,380.82,debt_consolidation,9.65,88.9,1,rent,45000.0
 867802,current,12000,60,12.99,272.98,debt_consolidation,16.83,61.6,5,rent,81500.0
 867531,current,35000,60,11.49,552.99,major_purchase,2.92,28.5,10,mortgage,144000.0
@@ -684,7 +684,7 @@ id,loan_status,loan_amount,loan_term,interest_rate,installment,purpose,dti,revol
 861191,current,15000,60,16.89,371.91,debt_consolidation,15.24,74.3,10,mortgage,54000.0
 863509,current,8000,60,15.99,194.51,other,15.17,25.4,8,mortgage,33696.0
 854646,current,13700,60,10.99,297.81,debt_consolidation,29.65,64.7,7,mortgage,78804.0
-863195,current,5600,60,16.89,138.85,debt_consolidation,21.83,63.8,5,rent,36000.0
+863195,current,5600,60,16.89,138.85,debt_consolidation,21.83,63.8,6,rent,36000.0
 863103,current,20000,60,16.89,495.87,debt_consolidation,18.04,73.0,2,rent,62208.0
 862586,current,11200,60,13.49,257.66,other,12.02,53.2,5,mortgage,110004.0
 862897,current,35000,60,19.29,567.69,debt_consolidation,20.62,68.2,5,rent,65000.0
@@ -733,9 +733,9 @@ id,loan_status,loan_amount,loan_term,interest_rate,installment,purpose,dti,revol
 833322,current,29700,60,20.62,530.77,debt_consolidation,17.23,24.6,2,mortgage,125000.0
 853969,current,12000,60,11.49,263.86,other,8.33,10.61,3,own,28800.0
 853576,current,23675,60,16.89,586.99,debt_consolidation,24.35,78.7,3,rent,52000.0
-853508,current,29100,60,13.99,450.73,debt_consolidation,17.41,46.0,7,rent,52872.0
+853508,current,29100,60,13.99,450.73,debt_consolidation,17.41,46.0,10,rent,52872.0
 834630,current,10000,60,13.49,189.22,major_purchase,4.69,40.2,10,mortgage,163008.0
-853071,current,4300,60,11.49,94.55,vacation,13.18,43.8,10,mortgage,48000.0
+853071,current,4300,60,11.49,94.55,vacation,13.18,43.8,6,mortgage,48000.0
 852429,current,5000,60,15.99,121.57,other,21.17,16.6,10,rent,42000.0
 852324,current,20000,60,18.39,512.13,debt_consolidation,15.25,90.1,10,mortgage,76000.0
 842916,current,3250,60,12.99,73.94,debt_consolidation,24.59,85.4,9,mortgage,45000.0
@@ -762,7 +762,7 @@ id,loan_status,loan_amount,loan_term,interest_rate,installment,purpose,dti,revol
 840738,current,12000,60,13.49,276.06,medical,6.14,60.9,10,own,139000.0
 846546,current,4500,60,9.99,95.59,car,7.55,34.7,10,mortgage,72000.0
 845948,current,25000,60,15.23,597.78,debt_consolidation,17.97,68.6,10,mortgage,107004.0
-845489,current,30000,60,11.99,667.19,home_improvement,4.53,36.3,10,mortgage,63874.0
+845489,current,30000,60,11.99,667.19,home_improvement,4.53,36.3,4,mortgage,63874.0
 841575,current,17000,60,9.99,361.12,debt_consolidation,23.52,74.8,10,mortgage,75000.0
 843113,current,15000,60,19.69,394.83,other,15.09,86.0,1,rent,45000.0
 844956,current,4100,60,22.11,113.5,wedding,8.88,54.1,2,rent,150000.0
@@ -778,9 +778,9 @@ id,loan_status,loan_amount,loan_term,interest_rate,installment,purpose,dti,revol
 843307,current,5175,60,11.99,115.09,debt_consolidation,4.93,42.3,8,rent,46000.0
 831941,current,24000,60,17.99,609.32,small_business,24.33,54.4,2,mortgage,70000.0
 842873,current,20000,60,17.99,507.76,credit_card,18.04,83.3,7,rent,54000.0
-842446,current,8000,60,11.99,177.92,other,1.05,10.9,10,own,24000.0
+842446,current,8000,60,11.99,177.92,other,1.05,10.9,3,own,24000.0
 842347,current,1800,60,20.25,47.94,debt_consolidation,2.63,53.7,2,mortgage,32000.0
-841714,current,15000,60,18.39,384.1,debt_consolidation,6.96,97.7,3,mortgage,32076.0
+841714,current,15000,60,18.39,384.1,debt_consolidation,6.96,97.7,8,mortgage,32076.0
 841663,current,18000,60,11.49,395.78,debt_consolidation,6.18,37.1,10,mortgage,57500.0
 841271,current,12000,60,15.99,291.76,wedding,12.0,18.8,1,mortgage,56000.0
 840966,current,35000,60,13.49,805.17,debt_consolidation,6.32,4.7,10,rent,120000.0
@@ -854,7 +854,7 @@ id,loan_status,loan_amount,loan_term,interest_rate,installment,purpose,dti,revol
 823877,current,12000,60,18.79,309.91,other,20.02,59.7,10,mortgage,68148.0
 814974,current,6500,60,17.99,165.03,car,19.63,69.6,2,rent,49200.0
 822845,current,30000,60,19.29,783.02,home_improvement,1.72,44.6,4,own,38400.0
-803343,current,13325,60,16.89,330.38,debt_consolidation,15.34,80.9,7,rent,42000.0
+803343,current,13325,60,16.89,330.38,debt_consolidation,15.34,80.9,10,rent,42000.0
 822168,current,16000,60,12.99,363.97,debt_consolidation,19.11,89.5,1,mortgage,55000.0
 819983,current,10000,60,19.69,263.22,other,24.84,67.1,1,rent,33000.0
 821256,current,15000,60,17.49,376.76,debt_consolidation,22.33,32.8,4,rent,62500.0
@@ -880,11 +880,11 @@ id,loan_status,loan_amount,loan_term,interest_rate,installment,purpose,dti,revol
 809779,current,16000,60,14.79,378.88,debt_consolidation,16.21,49.9,10,mortgage,87000.0
 815918,current,6000,60,10.99,130.43,car,19.11,65.9,2,mortgage,53640.0
 814714,current,8000,60,18.79,206.61,other,18.42,31.7,7,mortgage,54996.0
-815142,current,12000,60,10.59,258.47,other,16.81,26.6,9,mortgage,22063.8
+815142,current,12000,60,10.59,258.47,other,16.81,26.6,3,mortgage,22063.8
 812051,current,14000,60,13.99,234.96,debt_consolidation,20.54,33.2,7,mortgage,82420.0
 814523,current,35000,60,19.69,777.15,home_improvement,10.11,48.3,5,mortgage,120000.0
 813978,current,20000,60,17.99,324.97,credit_card,15.26,64.0,10,mortgage,49000.0
-812894,current,4200,60,13.99,97.71,debt_consolidation,17.89,46.7,1,own,11808.0
+812894,current,4200,60,13.99,97.71,debt_consolidation,17.89,46.7,3,own,11808.0
 777793,current,15000,60,19.29,391.51,wedding,15.57,70.9,9,mortgage,75000.0
 812314,current,13650,60,16.49,253.78,major_purchase,4.77,19.8,2,rent,40000.0
 813179,current,23000,60,19.69,605.4,debt_consolidation,15.36,99.1,4,mortgage,65000.0
@@ -899,7 +899,7 @@ id,loan_status,loan_amount,loan_term,interest_rate,installment,purpose,dti,revol
 807138,current,24000,60,15.23,444.15,debt_consolidation,14.15,51.5,10,mortgage,76000.0
 810333,current,9725,60,17.49,244.27,small_business,1.29,88.6,1,mortgage,70000.0
 809996,current,18575,60,11.99,360.84,debt_consolidation,14.68,61.3,7,rent,56000.0
-809667,current,9175,60,10.59,197.62,other,10.03,14.9,3,own,50000.0
+809667,current,9175,60,10.59,197.62,other,10.03,14.9,1,own,50000.0
 809092,current,13500,60,13.49,263.41,home_improvement,17.23,41.5,10,own,50004.0
 808952,current,25000,60,10.99,543.44,small_business,10.4,1.2,5,mortgage,63000.0
 808861,current,12000,60,15.23,286.93,wedding,20.31,73.1,1,rent,90000.0
@@ -957,7 +957,7 @@ id,loan_status,loan_amount,loan_term,interest_rate,installment,purpose,dti,revol
 796502,current,12400,60,17.99,314.82,debt_consolidation,9.63,46.8,10,rent,75000.0
 795569,current,14400,60,17.49,361.69,home_improvement,24.99,83.4,5,mortgage,52000.0
 782224,current,12000,60,10.59,258.47,debt_consolidation,13.29,21.7,3,mortgage,42000.0
-794550,current,12000,60,10.59,258.47,debt_consolidation,16.79,8.7,10,mortgage,45600.0
+794550,current,12000,60,10.59,258.47,debt_consolidation,16.79,8.7,4,mortgage,45600.0
 782414,current,24250,60,11.99,539.31,debt_consolidation,22.91,87.4,2,rent,55000.0
 793421,current,11750,60,17.99,298.31,major_purchase,23.73,62.3,9,rent,33523.2
 792975,current,20000,60,17.49,502.34,debt_consolidation,12.25,74.7,10,mortgage,108996.0
@@ -976,7 +976,7 @@ id,loan_status,loan_amount,loan_term,interest_rate,installment,purpose,dti,revol
 787054,current,1000,60,11.49,21.99,car,8.1,32.6,10,mortgage,84000.0
 788563,current,14500,60,16.49,356.4,debt_consolidation,20.2,55.3,10,rent,30000.0
 788667,current,13000,60,12.99,295.73,debt_consolidation,9.82,29.6,5,rent,60000.0
-788621,current,8500,60,12.99,193.36,debt_consolidation,17.17,26.2,2,mortgage,55000.0
+788621,current,8500,60,12.99,193.36,debt_consolidation,17.17,26.2,9,mortgage,55000.0
 788495,current,25000,60,15.23,413.66,home_improvement,10.53,11.4,10,mortgage,66000.0
 786538,current,15000,60,16.49,368.69,debt_consolidation,20.43,57.9,9,mortgage,48000.0
 787285,current,15550,60,13.99,361.75,debt_consolidation,23.52,55.5,10,rent,48000.0
@@ -985,7 +985,7 @@ id,loan_status,loan_amount,loan_term,interest_rate,installment,purpose,dti,revol
 785079,current,18000,60,18.39,419.94,small_business,9.3,25.8,4,rent,48000.0
 787553,current,15000,60,13.49,345.08,debt_consolidation,13.68,12.8,10,rent,90000.0
 787327,current,16000,60,16.89,396.7,medical,13.67,53.3,10,mortgage,51000.0
-787342,current,13000,60,10.99,282.59,major_purchase,18.15,5.9,10,own,25848.0
+787342,current,13000,60,10.99,282.59,major_purchase,18.15,5.9,1,own,25848.0
 787212,current,12000,60,10.99,260.85,home_improvement,4.04,14.0,1,mortgage,41000.0
 787098,current,12000,60,16.49,294.96,credit_card,20.29,89.7,3,rent,41750.0
 787064,current,15000,60,11.49,211.64,credit_card,8.09,45.2,9,mortgage,55000.0
@@ -1058,7 +1058,7 @@ id,loan_status,loan_amount,loan_term,interest_rate,installment,purpose,dti,revol
 765295,current,11400,60,16.49,280.21,debt_consolidation,20.82,66.1,10,mortgage,43104.0
 765141,current,24000,60,18.39,614.55,debt_consolidation,15.95,87.3,10,mortgage,85000.0
 764093,current,25000,60,18.39,525.57,debt_consolidation,16.41,76.6,3,mortgage,140000.0
-765027,current,10000,60,10.59,215.39,home_improvement,13.92,23.1,1,mortgage,60000.0
+765027,current,10000,60,10.59,215.39,home_improvement,13.92,23.1,5,mortgage,60000.0
 757305,current,3000,60,13.99,69.79,other,24.64,58.3,10,mortgage,41000.0
 764775,current,8000,60,11.49,175.91,major_purchase,0.0,0.1,9,mortgage,69313.0
 749598,current,10000,60,13.49,230.05,other,17.8,40.9,8,rent,30000.0
@@ -1116,7 +1116,7 @@ id,loan_status,loan_amount,loan_term,interest_rate,installment,purpose,dti,revol
 756203,current,5000,60,17.99,126.94,debt_consolidation,11.58,87.9,1,mortgage,37000.0
 756173,current,12000,60,19.29,313.21,home_improvement,1.95,79.4,10,mortgage,168000.0
 717267,current,13000,60,10.59,280.01,major_purchase,16.01,31.1,7,mortgage,38004.0
-755095,current,6000,60,7.49,120.2,major_purchase,26.32,10.7,4,own,17964.0
+755095,current,6000,60,7.49,120.2,major_purchase,26.32,10.7,2,own,17964.0
 754416,current,4000,60,8.49,82.05,car,11.39,42.6,3,own,41520.0
 754163,current,35000,60,19.29,577.48,debt_consolidation,20.06,96.0,10,rent,190000.0
 747464,current,3500,60,8.49,71.8,other,6.37,0.0,3,mortgage,85000.0
