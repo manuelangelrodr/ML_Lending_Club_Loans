@@ -281,3 +281,30 @@ def test_mann_whitney(df1, df2, column_df):
         print(f"Se rechaza la hipótesis nula: Hay diferencias significativas de la variable {column_df} entre pagados e impagados")
     else:
         print(f"No se puede rechazar la hipótesis nula: No hay diferencias significativas de la variable {column_df} entre pagos e impagos")
+
+
+# FUNCION DATA-REPORT
+        
+def data_report(df):
+    # Sacamos los NOMBRES
+    cols = pd.DataFrame(df.columns.values, columns=["COL_N"])
+
+    # Sacamos los TIPOS
+    types = pd.DataFrame(df.dtypes.values, columns=["DATA_TYPE"])
+
+    # Sacamos los MISSINGS
+    percent_missing = round(df.isnull().sum() * 100 / len(df), 2)
+    percent_missing_df = pd.DataFrame(percent_missing.values, columns=["MISSINGS (%)"])
+
+    # Sacamos los VALORES UNICOS
+    unicos = pd.DataFrame(df.nunique().values, columns=["UNIQUE_VALUES"])
+    
+    percent_cardin = round(unicos['UNIQUE_VALUES']*100/len(df), 2)
+    percent_cardin_df = pd.DataFrame(percent_cardin.values, columns=["CARDIN (%)"])
+
+    concatenado = pd.concat([cols, types, percent_missing_df, unicos, percent_cardin_df], axis=1, sort=False)
+    concatenado.set_index('COL_N', drop=True, inplace=True)
+
+
+    return concatenado.T
+
