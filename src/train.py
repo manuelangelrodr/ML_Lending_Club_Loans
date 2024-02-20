@@ -8,7 +8,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 
-# df = pd.read_csv('../src/data/processed/df_original.csv')
-df2 = pd.read_csv('ML_Lending_Club_Loans\src\data\processed\df_original.csv')
 
-df2.head(10)
+# CARGAMOS DATASET
+df = pd.read_csv('../data/processed/df_original.csv')
+
+
