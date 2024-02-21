@@ -12,7 +12,7 @@ from sklearn.model_selection import train_test_split, cross_val_score, GridSearc
 from sklearn.preprocessing import OneHotEncoder, StandardScaler, MinMaxScaler, RobustScaler, LabelEncoder, FunctionTransformer
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVR
-from sklearn.metrics import accuracy_score, recall_score, f1_score, roc_auc_score, confusion_matrix, ConfusionMatrixDisplay, classification_report
+from sklearn.metrics import accuracy_score, recall_score, f1_score, roc_auc_score, confusion_matrix, ConfusionMatrixDisplay, classification_report, precision_score
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier, VotingClassifier, BaggingClassifier, AdaBoostClassifier
@@ -260,7 +260,7 @@ def preprocess_data(X_train, X_test, numeric_cols, categorical_cols):
     preprocessor = ColumnTransformer(
         transformers=[
             ('num', StandardScaler(), numeric_cols),
-            ('cat', OneHotEncoder(), categorical_cols)
+            ('cat', OneHotEncoder(handle_unknown='ignore'), categorical_cols)
         ])
 
     # Crear el pipeline
@@ -282,6 +282,73 @@ def preprocess_data(X_train, X_test, numeric_cols, categorical_cols):
 
     return X_train_transformed_df, X_test_transformed_df
 
+# Misma funcion que el anterior pero sin datos de prueba
+
+def dividir_dataset(df, test_size=0.25, random_state=None, target='loan_status', no_incluir='id'):
+    """
+    Función para dividir un DataFrame en conjuntos de entrenamiento y prueba.
+
+    Args:
+    - df: DataFrame que se desea dividir.
+    - test_size: Porcentaje del dataset que se desea asignar al conjunto de prueba. Por defecto, es 0.25.
+    - random_state: Semilla para la generación de números aleatorios. Por defecto, es None.
+
+    Returns:
+    - train_set: DataFrame de entrenamiento.
+    - test_set: DataFrame de prueba.
+    """
+    train_set, test_set = train_test_split(df, test_size=test_size, random_state=random_state, stratify=df[target])
+    X_train_set = train_set.drop(columns=[no_incluir, target])
+    X_test_set = test_set.drop(columns=[no_incluir, target])
+    y_train_set = train_set[target]
+    y_test_set = test_set[target]
+    return X_train_set, X_test_set, y_train_set, y_test_set
+
+
+# HACEMOS LA TRANSFORMACION DE VARIABLES
+
+def pipeline_preprocess_data(df, numeric_cols, categorical_cols):
+    """
+    Preprocesa los datos utilizando un pipeline que incluye 
+    escalado estándar para variables numéricas y codificación OneHot para variables categóricas.
+
+    Argumentos:
+    df (pd.DataFrame): Conjunto de datos .
+    
+    numeric_cols (list): Lista de nombres de columnas numéricas.
+    categorical_cols (list): Lista de nombres de columnas categóricas.
+
+    Retorna:
+    pd.DataFrame, : Conjuntos de datos dpreprocesados.
+    """
+    # Crear el preprocesador para las columnas
+    preprocessor = ColumnTransformer(
+        transformers=[
+            ('num', StandardScaler(), numeric_cols),
+            ('cat', OneHotEncoder(handle_unknown='ignore'), categorical_cols)
+        ])
+
+    # Crear el pipeline
+    pipeline = Pipeline(steps=[('preprocessor', preprocessor)])
+
+    # Aplicar el pipeline al conjunto de datos de entrenamiento y prueba
+    df_transformed = pipeline.fit_transform(df)
+    
+
+    # Obtener los nombres de las columnas después de la transformación OneHotEncoder
+    ohe_feature_names = pipeline.named_steps['preprocessor'].named_transformers_['cat'].get_feature_names_out(input_features=categorical_cols)
+
+    # Combinar los nombres de columnas numéricas y categóricas
+    transformed_feature_names = list(numeric_cols) + list(ohe_feature_names)
+
+    # Convertir la salida a DataFrame de pandas
+    df_transformed_df = pd.DataFrame(df_transformed, columns=transformed_feature_names)
+   
+
+    return df_transformed_df
+
+
+
 # Devuelve las metricas del dataset de entrenamiento
 
 def make_results(model_name:str, model_object, metric:str):
@@ -300,6 +367,7 @@ def make_results(model_name:str, model_object, metric:str):
                  'recall': 'mean_test_recall',
                  'f1': 'mean_test_f1',
                  'accuracy': 'mean_test_accuracy',
+                 'precision' : 'mean_test_precision'
                  }
 
     # Get all the results from the CV and put them in a df
@@ -313,6 +381,7 @@ def make_results(model_name:str, model_object, metric:str):
     recall = best_estimator_results.mean_test_recall
     roc_auc = best_estimator_results.mean_test_roc_auc
     accuracy = best_estimator_results.mean_test_accuracy
+    precision = best_estimator_results.mean_test_precision
 
     # Create table of results
     table = pd.DataFrame({'model': [model_name],
@@ -320,8 +389,8 @@ def make_results(model_name:str, model_object, metric:str):
                         'recall': [recall],
                         'F1': [f1],
                         'accuracy': [accuracy],
-                        },
-                       )
+                        'precision' : [precision]
+                        })
 
     return table
 
@@ -342,12 +411,14 @@ def get_test_scores(model_name:str, preds, y_test_data):
     roc_auc = roc_auc_score(y_test_data, preds)
     recall = recall_score(y_test_data, preds)
     f1 = f1_score(y_test_data, preds)
+    precision = precision_score(y_test_data, preds)
 
     table = pd.DataFrame({'model': [model_name],
                         'roc_auc': [roc_auc],
                         'recall': [recall],
                         'F1': [f1],
-                        'accuracy': [accuracy]
+                        'accuracy': [accuracy],
+                        'precision' : [precision]
                         })
 
     return table
@@ -425,20 +496,20 @@ y_pred = lr.predict(X_test_transformed_df)
 lr = LogisticRegression(random_state=42, class_weight='balanced')
 
 # 2. Create a dictionary of hyperparameters to tune
-cv_params = {'penalty': ['l1', 'l2'],
+cv_params = {'penalty': [None, 'l1', 'l2'],
              'C': [0.1, 0.5, 1],
-             'solver' : ['saga'],
+             'solver' : ['saga', 'lbfgs'],
             }
 
 # 3. Define a dictionary of scoring metrics to capture
-scoring = ['accuracy', 'roc_auc', 'recall', 'f1']
+scoring = ['accuracy', 'roc_auc', 'recall', 'f1', 'precision']
 
 # 4. Instantiate the GridSearchCV object
-lr_cv = GridSearchCV(lr, cv_params, scoring=scoring, cv=5, refit='roc_auc')
+lr_cv = GridSearchCV(lr, cv_params, scoring=scoring, cv=5, refit='recall')
 
 lr_cv.fit(X_train_transformed_df, y_train)
 
-lr_cv_results = make_results('Logistic Regression CV', lr_cv, 'roc_auc')
+lr_cv_results = make_results('Logistic Regression CV', lr_cv, 'recall')
 
 lr_val_preds = lr_cv.best_estimator_.predict(X_test_transformed_df)
 
