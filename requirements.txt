@@ -5,3 +5,5 @@ seaborn
 scipy
 catboost
 xgboost
+imbalanced-learn
+keras

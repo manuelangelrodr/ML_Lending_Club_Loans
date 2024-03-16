@@ -2,6 +2,8 @@
 
 # IMPORTAMOS LIBRERIAS
 
+# Importamos las librerías Python que vamos a necesitar en nuestro estudio
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -17,10 +19,26 @@ from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier, VotingClassifier, BaggingClassifier, AdaBoostClassifier
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.neighbors import KNeighborsClassifier
 from catboost import CatBoostClassifier
 from xgboost import XGBClassifier
 from xgboost import plot_importance
 from sklearn.svm import SVC
+from keras.models import Sequential
+from keras.layers import Dense
+from imblearn.over_sampling import SMOTE
+
+
+import pickle
+
+import sys
+sys.path.append('../')
+from utils.eda_functions import *
+
+pd.set_option('display.max_columns', None)
+
+import warnings
+warnings.filterwarnings('ignore')
 
 
 import pickle
@@ -275,6 +293,15 @@ def preprocess_data(X_train, X_test, numeric_cols, categorical_cols):
 
     # Combinar los nombres de columnas numéricas y categóricas
     transformed_feature_names = list(numeric_cols) + list(ohe_feature_names)
+
+    # Balanceamos el dataset de train con los el método SMOTE
+
+    smote = SMOTE()
+    X_train_transformed_resampled, y_train_resampled = smote.fit_resample(X_train_transformed, y_train)
+
+    X_train_transformed = X_train_transformed_resampled.copy()
+    y_train = y_train_resampled.copy()
+
 
     # Convertir la salida a DataFrame de pandas
     X_train_transformed_df = pd.DataFrame(X_train_transformed, columns=transformed_feature_names)
