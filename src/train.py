@@ -294,15 +294,7 @@ def preprocess_data(X_train, X_test, numeric_cols, categorical_cols):
     # Combinar los nombres de columnas numéricas y categóricas
     transformed_feature_names = list(numeric_cols) + list(ohe_feature_names)
 
-    # Balanceamos el dataset de train con los el método SMOTE
-
-    smote = SMOTE()
-    X_train_transformed_resampled, y_train_resampled = smote.fit_resample(X_train_transformed, y_train)
-
-    X_train_transformed = X_train_transformed_resampled.copy()
-    y_train = y_train_resampled.copy()
-
-
+    
     # Convertir la salida a DataFrame de pandas
     X_train_transformed_df = pd.DataFrame(X_train_transformed, columns=transformed_feature_names)
     X_test_transformed_df = pd.DataFrame(X_test_transformed, columns=transformed_feature_names)
