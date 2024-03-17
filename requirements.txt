@@ -1,3 +1,5 @@
+numpt
+pandas
 scikit-learn
 statsmodels
 matplotlib
@@ -7,3 +9,4 @@ catboost
 xgboost
 imbalanced-learn
 keras
+Flask
