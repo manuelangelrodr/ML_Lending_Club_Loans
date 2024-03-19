@@ -1,6 +1,5 @@
 # IMPORTAR LIBRERIAS
 
-import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
@@ -10,10 +9,10 @@ import pickle
 
 import sys
 sys.path.append('../')
-from utils.eda_functions import *
+from src.utils.eda_functions import *
 
 # CARGAMOS EL DATASET
 
-df = pd.read_csv('../data/processed/df_original.csv')
+df = pd.read_csv('../src/data/processed/df_original.csv')
 
 print(df.head(10))
