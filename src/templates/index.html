@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loan Status Prediction</title>
+</head>
+<body>
+    <h2>Predict the Status of a Loan Application</h2>
+    <form action="/" method="post">
+        <label for="grade">Grado Calificación:</label>
+        <select name="grade" id="grade">
+            <!-- Opciones basadas en tu dataset -->
+            <option value="a">a</option>
+            <option value="b">b</option>
+            <option value="c">c</option>
+            <option value="d">d</option>
+            <option value="e">e</option>
+            <option value="f">f</option>
+            <option value="g">g</option>
+        </select><br>
+
+        <!-- Variable 'loan_term' añadida aquí -->
+        <label for="loan_term">Plazo Devolución (meses):</label>
+        <select name="loan_term" id="loan_term">
+            <option value="36">36 months</option>
+            <option value="60">60 months</option>
+        </select><br>
+
+        <!-- Variable 'verification_status' añadida aquí -->
+        <label for="verification_status">Ingresos Verificados:</label>
+        <select name="verification_status" id="verification_status">
+            <option value="not verified">Not Verified</option>
+            <option value="verified">Verified</option>
+            <option value="source verified">Source Verified</option>
+        </select><br>
+
+        <!-- Variable 'purpose' añadida aquí -->
+        <label for="purpose">Destino Préstamo:</label>
+        <select name="purpose" id="purpose">
+            <option value="debt_consolidation">Debt Consolidation</option>
+            <option value="credit_card">Credit Card</option>
+            <option value="other">Other</option>
+            <option value="home_improvement">Home Improvement</option>
+            <option value="major_purchase">Major Purchase</option>
+            <option value="small_business">Small Business</option>
+            <option value="car">Car</option>
+            <option value="wedding">Wedding</option>
+            <option value="medical">Medical</option>
+            <option value="moving">Moving</option>
+            <option value="house">House</option>
+            <option value="vacation">Vacation</option>
+            <option value="educational">Educational</option>
+            <option value="renewable_energy">Renewable Energy</option>
+        </select><br>
+
+        <!-- Variable 'home_ownership' añadida aquí -->
+        <label for="home_ownership">Tipo Vivienda:</label>
+        <select name="home_ownership" id="home_ownership">
+            <option value="rent">Rent</option>
+            <option value="mortgage">Mortgage</option>
+            <option value="own">Own</option>
+            <option value="other">Other</option>
+            <option value="none">None</option>
+        </select><br>
+        
+        <!-- Repite lo anterior para las demás variables categóricas -->
+
+        <!-- Variable 'inquiries' añadida aquí -->
+        <label for="inquiries">Solicitudes en los últimos 6 meses:</label>
+        <input type="number" id="inquiries" name="inquiries" min="0" max="8" required><br>
+        
+        <label for="loan_amount">Cantidad Préstamo:</label>
+        <input type="number" id="loan_amount" name="loan_amount" required><br>
+
+        <label for="interest_rate">Tipo de Interés (%):</label>
+        <input type="number" id="interest_rate" name="interest_rate" min="0" step="0.01" required><br>
+
+        <label for="dti">Ratio Deuda / Ingresos (%):</label>
+        <input type="number" id="dti" name="dti" min="0" step="0.01" required><br>
+
+        <label for="derogatory">Número de Registros Públicos Derogatorios:</label>
+        <input type="number" id="derogatory" name="derogatory" min="0" max="4" step="1" required><br>
+
+        <label for="revolving_rate">Ratio de Utilización de Crédito Revolving (%):</label>
+        <input type="number" id="revolving_rate" name="revolving_rate" min="0" step="0.01" required><br>
+
+        <label for="total_credit_lines">Número Total de Líneas de Crédito:</label>
+        <input type="number" id="total_credit_lines" name="total_credit_lines" min="0" step="1" required><br>
+
+        <label for="employment_length">Antigüedad Trabajando (1 - 10 años):</label>
+        <input type="number" id="employment_length" name="employment_length" min="1" max="10" step="1" required><br>
+
+        <label for="annual_income">Ingresos Anuales ($):</label>
+        <input type="number" id="annual_income" name="annual_income" min="0" step="0.01" required><br>
+
+
+        
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction %}
+        <h3>Prediction: {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
